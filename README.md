@@ -1,2 +1,2 @@
-# Quizzland
-Create a quiz interface in Java! 
+# Quizland
+Create your own Quizzes in Java!!
