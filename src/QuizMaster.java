@@ -38,7 +38,7 @@ public class QuizMaster {
         welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
         welcomeLabel.setForeground(Color.WHITE);
 
-        JPanel buttonPanel = new JPanel(new GridLayout(2, 3, 20, 20)); // 2 rows, 3 columns, with spacing
+        JPanel buttonPanel = new JPanel(new GridLayout(0, 3, 20, 20)); // 2 rows, 3 columns, with spacing
 
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 50, 20, 50)); 
 
@@ -64,12 +64,7 @@ public class QuizMaster {
         buttonPanel.add(calculusButton);
         buttonPanel.add(harryPotterButton);
 
-        // empty buttons: you can change when you add your own!
-        for (int i = 0; i < 4; i++) {
-            JButton emptyButton = createEmptyButton();
-            buttonPanel.add(emptyButton);
-        }
-
+  
         // Add the top, welcome label, and button panel to the frame
         topPanel.add(welcomeLabel);
         frame.add(topPanel, BorderLayout.NORTH);
