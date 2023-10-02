@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Quizzland: A Fun Quiz Interface in Java!
 
 Welcome to QuizLand, an exciting project that allows you to create and play quizzes using Java Swing, a graphical user interface library for Java. This project was originally created for the Hacktoberfest event at MIT-ADT, but we invite everyone to join in the fun! You can create your own quiz and add it to the main interface. Below, we have included some demo pictures to help you get started:
@@ -83,8 +83,3 @@ buttonPanel.add(your_quiz_name_Button);
 11. Then, submit a pull request for review. If you've done a good job, it will be accepted soon!
 
 Good luck & happy Hacktoberfest! 🎃
-
-=======
-# Quizland
-Create your own Quizzes in Java!!
->>>>>>> 72245aadd298d44f9f728371454998071e3fc4d9
