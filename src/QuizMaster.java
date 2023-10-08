@@ -64,7 +64,16 @@ public class QuizMaster {
         buttonPanel.add(calculusButton);
         buttonPanel.add(harryPotterButton);
 
-  
+    JButton your_quiz_name_Button = createStyledButton("AnimeQuiz", "Arial", "./img/your_quiz_img.jpg");
+
+your_quiz_name_Button.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        your_quiz_name quizInstance = new your_quiz_name();
+    }
+});
+
+buttonPanel.add(your_quiz_name_Button);
         // Add the top, welcome label, and button panel to the frame
         topPanel.add(welcomeLabel);
         frame.add(topPanel, BorderLayout.NORTH);
