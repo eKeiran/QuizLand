@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
-public class CalculusQuiz extends JFrame {
+public class chessMaster extends JFrame {
     private static final long serialVersionUID = 1L;
 	private int questionIndex = 0;
     private int score = 0;
@@ -19,24 +19,23 @@ public class CalculusQuiz extends JFrame {
     private ButtonGroup answerGroup;
     private JRadioButton[] answerButtons;
     private JButton nextButton;
-
     private String[] questions = {
-            "What is the derivative of ln(x)?",
-            "Evaluate the integral of sin(2x) dx.",
-            "What is the limit of (1/x) as x approaches 0?",
-            "What is the derivative of e^(3x)?",
-            "Evaluate the integral of (x^2 + 1) dx."
+            "What are the number of squares on the chess board?",
+            "Pawn cannot promote itself to which of the following peices ?",
+            "What are the points of all the peices?",
+            "Which of the peice is the most tricky peice.",
+            "Queen is combination of which two peices"
     };
 
     private String[][] answerChoices = {
-            {"1/x", "x", "cos(x)", "e^(1/x)", "2x"},
-            {"-1/2 cos(2x) + C", "2 cos(x) + C", "sin(2x) + C", "-cos(2x) + C", "2 sin(x) + C"},
-            {"Infinity", "1", "0", "Undefined", "Approaches 1"},
-            {"3e^(3x)", "e^(3x)", "3x", "3e^x", "e^(3/x)"},
-            {"(x^3/3) + x + C", "x^2 + C", "(x^3/3) + C", "(x^2/2) + x + C", "x^3 + C"}
+            {"86", "48", "64", "96", "16"},
+            {"Rook", "Knight", "Bishop", "Queen", "None of the above"},
+            {"(5,3,3,9,undefined,1)", "(8,4,7,2,undefined,1)", "(10,12,5,9,undefined,1)", "(1,5,3,3,undefined,2)","(0,6,7,10,undefined,2)"},
+            {"Bishop", "Knight", "Rook", "Queen", "King"},
+            {"Knight and Bishop", "Knight and Rook", "Bishop and rook", "Bishop and pawn", "Knight and pawn"}
     };
 
-    public CalculusQuiz() {
+    public chessMaster() {
         setTitle("Calculus Quiz");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(740, 450);
@@ -45,7 +44,7 @@ public class CalculusQuiz extends JFrame {
         // Load the background image
         BufferedImage backgroundImage = null;
         try {
-            backgroundImage = ImageIO.read(getClass().getResource("img/bgimg.jpg"));
+            backgroundImage = ImageIO.read(getClass().getResource("images/chess.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -175,7 +174,7 @@ public class CalculusQuiz extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new CalculusQuiz();
+                new chessMaster();
             }
         });
     }
