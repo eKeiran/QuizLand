@@ -23,7 +23,12 @@ public class QuizMaster {
 
         // Create a JPanel for the top section with a background GIF
         JPanel topPanel = new JPanel() {
-            @Override
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			@Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 // Load and draw your background GIF here
@@ -45,6 +50,7 @@ public class QuizMaster {
         // Create buttons for each quiz with different fonts and backgrounds
         JButton calculusButton = createStyledButton("Calculus", "Breathe Fire", "./img/calculus.jpg");
         JButton harryPotterButton = createStyledButton("Harry Potter", "Breathe Fire", "./img/harry_potter.jpg");
+        JButton ChessGameButton = createStyledButton("Chess Game", "Breathe Fire", "./img/chess.jpeg");
 
         calculusButton.addActionListener(new ActionListener() {
             @Override
@@ -52,7 +58,12 @@ public class QuizMaster {
             	  CalculusQuiz CQ = new CalculusQuiz();
             }
         });
-       
+        ChessGameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	  chessMaster Ch = new chessMaster();
+            }
+        });
       
         harryPotterButton.addActionListener(new ActionListener() {
             @Override
@@ -63,7 +74,7 @@ public class QuizMaster {
 
         buttonPanel.add(calculusButton);
         buttonPanel.add(harryPotterButton);
-
+        buttonPanel.add(ChessGameButton);
   
         // Add the top, welcome label, and button panel to the frame
         topPanel.add(welcomeLabel);
@@ -73,15 +84,6 @@ public class QuizMaster {
         frame.setVisible(true);
     }
 
-
-    // Function to create an empty button with borders
-    private static JButton createEmptyButton() {
-        JButton button = new JButton();
-        button.setPreferredSize(new Dimension(125, 20)); // Set button size
-        button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3)); // Add a border
-
-        return button;
-    }
 
     // Function to create a styled button with custom font and background image
     private static JButton createStyledButton(String text, String fontName, String imagePath) {
@@ -94,7 +96,12 @@ public class QuizMaster {
         button.setBorderPainted(false);
 
         JPanel overlayPanel = new JPanel() {
-            @Override
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			@Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 g.setColor(new Color(0, 0, 0, 64)); // Transparent black color
