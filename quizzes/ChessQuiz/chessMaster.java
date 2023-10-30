@@ -28,15 +28,15 @@ public class chessMaster extends JFrame {
     };
 
     private String[][] answerChoices = {
-            {"86", "48", "64", "96", "16"},
-            {"Rook", "Knight", "Bishop", "Queen", "None of the above"},
+            {"64", "48", "86", "96", "16"},
+            {"None of the above", "Knight", "Bishop", "Queen", "Rook"},
             {"(5,3,3,9,undefined,1)", "(8,4,7,2,undefined,1)", "(10,12,5,9,undefined,1)", "(1,5,3,3,undefined,2)","(0,6,7,10,undefined,2)"},
-            {"Bishop", "Knight", "Rook", "Queen", "King"},
-            {"Knight and Bishop", "Knight and Rook", "Bishop and rook", "Bishop and pawn", "Knight and pawn"}
+            {"Knight", "Bishop", "Rook", "Queen", "King"},
+            {"Bishop and rook", "Knight and Rook", "Knight and Bishop", "Bishop and pawn", "Knight and pawn"}
     };
 
     public chessMaster() {
-        setTitle("Calculus Quiz");
+        setTitle("Chess Quiz");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(740, 450);
         setLocationRelativeTo(null);
