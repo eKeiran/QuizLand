@@ -45,6 +45,7 @@ public class QuizMaster {
         // Create buttons for each quiz with different fonts and backgrounds
         JButton calculusButton = createStyledButton("Calculus", "Breathe Fire", "./img/calculus.jpg");
         JButton harryPotterButton = createStyledButton("Harry Potter", "Breathe Fire", "./img/harry_potter.jpg");
+        JButton pokemonButton = createStyledButton("Pokemon", "Breathe Fire", "./img/pokemon.jpg");
 
         calculusButton.addActionListener(new ActionListener() {
             @Override
@@ -60,9 +61,17 @@ public class QuizMaster {
             	 HarryPotterQuiz HP = new HarryPotterQuiz();
             	}
         });
+        
+        pokemonButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	 PokemonQuiz PQ = new PokemonQuiz();
+            	}
+        });
 
         buttonPanel.add(calculusButton);
         buttonPanel.add(harryPotterButton);
+        buttonPanel.add(pokemonButton);
 
   
         // Add the top, welcome label, and button panel to the frame
