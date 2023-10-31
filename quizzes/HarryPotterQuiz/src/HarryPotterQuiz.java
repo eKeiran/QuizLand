@@ -7,7 +7,11 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class HarryPotterQuiz extends JFrame {
-    private int questionIndex = 0;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int questionIndex = 0;
     private int[] characterScores = new int[5];
 
     private JLabel questionLabel;
@@ -54,7 +58,12 @@ public class HarryPotterQuiz extends JFrame {
         // Create a JPanel with a background image
         BufferedImage finalBackgroundImage = backgroundImage;
         JPanel mainPanel = new JPanel() {
-            @Override
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			@Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 if (finalBackgroundImage != null) {
